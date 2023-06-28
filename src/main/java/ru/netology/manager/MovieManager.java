@@ -28,21 +28,22 @@ public class MovieManager {
         return items;
     }
 
-    public MovieItem[] findLast() {
+
+
+    public MovieItem[] findLast(){
         int resultLength;
-        if (items.length < shouMovie) {
-            resultLength = items.length;
-        } else {
-            resultLength = shouMovie;
+        if(items.length<shouMovie){
+        resultLength=items.length;
+        }else{
+        resultLength=shouMovie;
         }
 
-        MovieItem[] result = new MovieItem[resultLength];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = items[items.length - 1 - i];
-
+        MovieItem[]result=new MovieItem[resultLength];
+        for(int i=0;i<result.length;i++){
+        result[i]=items[items.length-1-i];
         }
         return result;
-    }
+        }
 
 }
 

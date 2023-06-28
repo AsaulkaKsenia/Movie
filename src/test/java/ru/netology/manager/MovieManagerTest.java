@@ -114,7 +114,7 @@ public class MovieManagerTest {
 
     @Test
     public void shouldLastTwoMovies() {
-        MovieManager film = new MovieManager(2);
+        MovieManager film = new MovieManager(1);
 
         film.add(item1);
         film.add(item2);
@@ -124,7 +124,26 @@ public class MovieManagerTest {
         film.add(item6);
         film.add(item7);
 
-        MovieItem[] expected = {item7, item6};
+        MovieItem[] expected = {item7};
+        MovieItem[] actual = film.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void shouldLastElevenMovies() {
+        MovieManager film = new MovieManager(11);
+
+        film.add(item1);
+        film.add(item2);
+        film.add(item3);
+        film.add(item4);
+        film.add(item5);
+        film.add(item6);
+        film.add(item7);
+
+        MovieItem[] expected = {item7, item6, item5, item4, item3, item2, item1};
         MovieItem[] actual = film.findLast();
 
         Assertions.assertArrayEquals(expected, actual);

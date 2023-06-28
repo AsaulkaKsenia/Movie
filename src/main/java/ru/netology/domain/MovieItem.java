@@ -14,17 +14,4 @@ public class MovieItem {
         this.genre = genre;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-
 }
